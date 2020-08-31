@@ -46,8 +46,8 @@
     "puppeteer": "^2.1.1",
     "request-promise-cache": "^2.0.1",
     "request-promise-native": "^1.0.7",
-    "simple.swap.core": "latest",
-    "swap.core": "latest",
+    "simple.swap.core": "^0.3.16",
+    "swap.core": "^0.3.136",
     "web3": "^1.2.4",
     "ws": "^5.2.2"
   },
