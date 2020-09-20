@@ -1,7 +1,7 @@
-на нашем сервере запустить root@DCbankroll ~/swap_new.bot # npm run pm2
-
+On our server launch `root@DCbankroll ~/swap_new.bot # npm run pm2`
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 
 # Swap.Bot
 
@@ -28,7 +28,8 @@ npm run start
 NETWORK=mainnet npm run start
 ```
 
-Try to open web-based client [https://testnet.swap.online](https://testnet.swap.online) and see if any orders show up.
+Try to open [web-based client](https://swaponline.io/) and see if any orders show up.
+
 
 ## REST API interface for swap-core
 
@@ -75,33 +76,20 @@ For example, this activates REPL where you can control the swap as you wish: you
 
 ## Directory structure
 
-- `app` - fetch crypto prices from yobit, CMC or constant
-- `cli` - NodeJS command-line interface communicating via REST API, outdated
-- `config` – constants
-- `helpers` – used by REST API
-- `microbot` - autopilot trading app. Here's the code for orderbook and autoswaps. Can be run separately
+- `app` – fetch crypto prices from yobit, CMC or constant
+- `cli` – NodeJS command-line interface communicating via REST API, outdated
+- `config` – constants (tokens, trading pairs, ...)
+- `helpers` – functions that search for orders and swaps using different filters (used by REST API)
+- `microbot` – autopilot trading app. Here's the code for orderbook and autoswaps. Can be run separately from REST API
 - `microbot/actions` – pure functions, order+swap actions
 - `microbot/core` – swap.core connectors
-- `routes` - REST API, including web interface
+- `routes` – REST API, including web interface
 - `services` – only Kraken connector
 - `test` – few shell testing scripts, outdated
-- `util` - also CLI. See "Util" section
+- `util` – also CLI. See "Util" section
 - `ws` – web socket listener bot, outdated
-- `app.js` - entry point. Activates both REST API and autopilot.
+- `app.js` – entry point. Activates both REST API and autopilot.
 
-- `app` - цены биткоина, эфира, SWAP токена c Yobit, CMC или просто константы
-- `cli` - NodeJS интерфейс для командной строки, общается с ботом через REST API
-- `config` – наборы констант: токены, торговые пары, конфиг для маркетмейкинга
-- `helpers` – функции, которые ищут ордеры и свопы по разным фильтрам
-- `microbot` - бот-автопилот. Маркетмейкер. Можно запускать отдельно от REST API
-- `microbot/actions` – функции, где записана логика работы с ордерами или свопами
-- `microbot/core` – функции, которые связываются с swap.core
-- `routes` - REST API и веб-интерфейс
-- `services` – только сервис подключения к Кракену
-- `test` – тесты, которые запускаются через командную строку
-- `util` - см. раздел Util
-- `ws` – бот, который слушает веб-сокеты, устарел
-- `app.js` - входная точка приложения. Запускает REST API и автопилота
 
 ## REST API Simple Reference
 
