@@ -1,8 +1,3 @@
-On our server launch `root@DCbankroll ~/swap_new.bot # npm run pm2`
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-
 # Swap.Bot
 
 _Trading engine for swap.core protocol_
